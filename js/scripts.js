@@ -6,10 +6,10 @@ function Pizza(size,toppings){
   this.price = 0;
 }
 
-Pizza.prototype.price = function(){
-  this.toppings.forEach(functio(topping))
-    this.topping += 1;
-  }
+Pizza.prototype.price = function() {
+  this.toppings.forEach(function(topping) {
+    (this.topping += 1);
+  })
   if(this.size === "small") {
     this.price += 10;
   } else if (this.size === "medium") {
@@ -25,7 +25,7 @@ console.log();
 $(document).ready(function(event) {
   $("form#pizzaOrder").submit(function(event){
     event.preventDefault();
-    var toppingsInput = $("#toppings:checked");
+    var toppingsInput = $("#toppings:checked").val();
     var toppingsArray = [];
     var sizeInput = $("#size").val();
 
