@@ -13,25 +13,51 @@
         <h1>Wellcome<br>to<br>Pizza World</h1>
       </div>
 
-      <form id="size">
+      <form id="pizzaOrder">
         <div class="row">
-          <div class="form-group">
-
-
-          <div class="col-lg-12">
-            <h3>Please selct the size of your pizza</h3>
-            <select class="form-control" id="pizzaSize">
-              <option> Choose a size here..</option>
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-            </select>
+          <div class="container">
+            <div class="form-group">
+              <div class="col-lg-12">
+                <h3>Please selct the size of your pizza</h3>
+                <select id="size" class="form-control" >
+                  <option> Choose a size here..</option>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+            </div>
           </div>
+
+          <div class="container">
+            <div class="col-lg-12" id="toppings">
+              <h3>Please check the box to select your toppings bellow:</h3>
+
+                <label class="checkbox-inline" for="pepperoni">Pepperoni</label>
+                <input type="checkbox" name="toppingsChoice" value="pepperoni">
+                <label class="checkbox-inline" for="meetballs">Meetballs</label>
+                <input type="checkbox" name="toppingsChoice" value="meetballs">
+                <label class="checkbox-inline" for="chicken">Chicken</label>
+                <input type="checkbox" name="toppingsChoice" value="chicken">
+                <label class="checkbox-inline" for="mozzarella">Mozzarella</label>
+                <input type="checkbox" name="toppingsChoice" value="mozzarella">
+                <label class="checkbox-inline" for="ricotta">Riccota</label>
+                <input type="checkbox" name="toppingsChoice" value="ricotta">
+                <label class="checkbox-inline" for="fontina">Fontina</label>
+                <input type="checkbox" name="toppingsChoice" value="fontina">
+                <label class="checkbox-inline" for="mushrooms">Mushrooms</label>
+                <input type="checkbox" name="toppingsChoice" value="mushrooms">
+                <label class="checkbox-inline" for="olives">Olives</label>
+                <input type="checkbox" name="toppingsChoice" value="olives">
+                <label class="checkbox-inline" for="onions">Onions</label>
+                <input type="checkbox" name="toppingsChoice" value="onions">
+
+
+
           </div>
         </div>
-
-
-
+        <button type="submit" class="btn btn-warning" name="button">Place Your Order</button>
+      </form>
     </div>
   </body>
 </html>
