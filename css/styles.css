@@ -1,0 +1,16 @@
+.jumbotron {
+  font-style: italic;
+  text-align: center;
+
+  background-image: url(https://www.simplyrecipes.com/wp-content/uploads/2019/09/easy-pepperoni-pizza-lead-4.jpg);
+  background-size: 1200px;
+}
+
+body {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+button {
+  padding-left: 50px;
+}

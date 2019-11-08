@@ -6,7 +6,7 @@ function Pizza(size,toppings){
   this.price = 0;
 }
 
-Pizza.prototype.price = function() {
+Pizza.prototype.getPrice = function() {
   this.toppings.forEach(function(topping) {
     (this.topping += 1);
   })
@@ -17,8 +17,11 @@ Pizza.prototype.price = function() {
   }else if (this.size === "large") {
     this.price += 8;
   }
-console.log();
-// return this.price;
+Pizza.protorype.getPrice = function(){
+return this.price;
+}
+}
+
 
 // User Interface Logic
 
@@ -28,13 +31,16 @@ $(document).ready(function(event) {
     var toppingsInput = $("#toppings:checked").val();
     var toppingsArray = [];
     var sizeInput = $("#size").val();
+    var summary = (size + toppings);
+
 
     toppingsInputs.forEach(function(toppingInput) {
       toppingsArray.push(toppingInput.val());
     });
 
-    var Pizza = new Pizza(SizeInput,ToppingsArray);
+    var newPizza = new Pizza(SizeInput,ToppingsArray);
     var price = Pizza.getPrice();
 
+    return this.size + this.toppings;
   })
 })
