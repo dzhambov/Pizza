@@ -8,7 +8,7 @@ function Pizza(size,toppings){
 
 Pizza.prototype.getPrice = function() {
   this.toppings.forEach(function(topping) {
-    (this.topping += 1);
+    this.topping += 1;
   })
   if(this.size === "small") {
     this.price += 10;
@@ -24,6 +24,7 @@ return this.price;
 
 
 // User Interface Logic
+var Pizza = new Pizza();
 
 $(document).ready(function(event) {
   $("form#pizzaOrder").submit(function(event){
@@ -33,12 +34,11 @@ $(document).ready(function(event) {
     var sizeInput = $("#size").val();
     var summary = (size + toppings);
 
-
     toppingsInputs.forEach(function(toppingInput) {
       toppingsArray.push(toppingInput.val());
     });
 
-    var newPizza = new Pizza(SizeInput,ToppingsArray);
+    var newPizza = new Pizza(sizeInput,toppingsArray);
     var price = Pizza.getPrice();
 
     return this.size + this.toppings;
